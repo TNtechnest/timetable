@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% comment %} {% block title %}TECHNEST | Login{% endblock %} {% endcomment %}
+
+{% block content %}
+  {% comment %} <h1>Login</h1> {% endcomment %}
+  {% if form.errors %}
+    {% comment %} <p>
+      Your username and password didn't match.
+      Please try again.
+    </p> {% endcomment %}
+  {% else %}
+    {% comment %} <p>Please, use the following form to log-in. If you don't have an account <a href="{% url "register" %}">register here</a></p> {% endcomment %}
+  {% endif %}
+  
+  <div class="login-form">
+    <form action="{% url 'login' %}" method="post">
+      <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+
+   <div class="signin"> 
+
+    <div class="content"> 
+
+     <h2>Sign In</h2> 
+
+     <div class="form"> 
+
+      <div class="inputBox"> 
+      
+
+       <!-- <input type="text" required> <i>Username</i>  -->
+<input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username"><i>Username</i>
+      </div> 
+
+      <div class="inputBox"> 
+
+       <!-- <input type="password" required>   -->
+       <input type="password" name="password" autocomplete="current-password" required="" id="id_password"><i>Password</i>
+
+      </div> 
+
+      <div class="links"> <a href="{% url 'password_reset' %}">Forgot Password</a> <a href="{% url "register" %}">Signup</a> 
+
+      </div> 
+
+      <div class="inputBox"> 
+
+       <input type="submit" value="LOGIN"> 
+
+      </div> 
+
+     </div> 
+
+    </div> 
+
+   </div> 
+
+  </section> <!-- partial --> 
+      {% csrf_token %}
+      {% comment %} <input type="hidden" name="next" value="{{ next }}" />
+      <p><input type="submit" value="LOGIN"></p>
+    </form>
+    <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+  </div> {% endcomment %}
+
+{% endblock %}

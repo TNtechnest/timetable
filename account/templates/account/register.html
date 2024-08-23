@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}TECHNEST | Register{% endblock %}
+
+{% block content %}
+  
+  <form method="post">
+    <div class="login-wrap">
+      <div class="login-html">
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <div class="login-form">
+          
+          <div class="sign-up-htm">
+            <div class="group">
+              <!-- <label for="user" class="label">Username</label>
+              <input id="user" type="text" class="input"> -->
+              <label for="id_username" class="label">Username</label> <input type="text" name="username" class="input" maxlength="150" required="" id="id_username">
+            </div>
+            <div class="group">
+              <!-- <label for="pass" class="label">Password</label>
+              <input id="pass" type="password" class="input" data-type="password"> -->
+              <label for="id_first_name" class="label">First name:</label>
+              <input type="text" name="first_name" class="input" maxlength="30" id="id_first_name">
+            </div>
+            <div class="group">
+              <!-- <label for="pass" class="label">Password</label>
+              <input id="pass" type="password" class="input" data-type="password"> -->
+              <label for="id_email" class="label">Email address:</label>
+              <input type="email" name="email" class="input" maxlength="254" id="id_email">
+            </div>
+            <div class="group">
+              <!-- <label for="pass" class="label">Password</label>
+              <input id="pass" type="password" class="input" data-type="password"> -->
+              <label for="id_password" class="label">Password:</label>
+              <input type="password" class="input" name="password" required="" id="id_password">
+            </div>
+            <div class="group">
+              <!-- <label for="pass" class="label">Repeat Password</label>
+              <input id="pass" type="password" class="input" data-type="password"> -->
+              <label for="id_password2" class="label">Repeat password:</label>
+              <input type="password" name="password2" class="input" required="" id="id_password2">
+            </div>
+            <div class="group">
+              <!-- <input type="submit" class="button" value="Sign Up"> -->
+              <input type="submit" class="button" value="Create my account">
+            </div>
+            <div class="hr"></div>
+            <div class="foot-lnk">
+              <label for="tab-1">Already Member?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% csrf_token %}
+    
+  </form>
+{% endblock %}

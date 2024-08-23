@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>You have been successfully logged out</h1>
+  <div class="container">
+    <div class="inner">
+      
+      <a href="{% url 'login' %}">
+      <button type="button">log-in again</button>
+    </a>
+      <div class="blob"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="inner">
+      <a href="{% url 'index' %}">
+      <button type="button" class>Homepage</button></a>
+      <div class="blob"></div>
+
+    </div>
+  </div>
+  <!-- partial -->
+    <script  src="TimetableGenerationSystem\projTECHNEST\account\static\css\logout.js"></script>
+{% endblock %}

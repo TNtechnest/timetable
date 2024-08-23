@@ -1,0 +1,2 @@
+meeting time chage age in C:\abdul\TimetableGenerationSystem\projttgs\ttgen\models.py
+table chagege in C:\Users\abdul\AppData\Local\Programs\Python\Python38\Scripts\abdul\TimetableGenerationSystem\projttgs\ttgen\models.py
