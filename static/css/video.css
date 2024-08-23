@@ -1,0 +1,56 @@
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+    background: #050505;
+  }
+  
+  .player {
+    position: relative;
+    filter: url(#ambilight);
+  
+    video {
+      width: 300px;
+      height: 200px;
+  
+      @media screen and (min-width: 720px) {
+        height: min(80vh, 480px);
+        width: auto;
+      }
+    }
+  }
+  
+  /** view my other pens */
+  .source {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 0.815em;
+    background: #1a7cb5;
+    padding: 0.5em;
+    gap: 0.5em;
+  
+    a {
+      color: currentColor;
+    }
+  }
+  
+  /** Fullscreen button */
+  button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    appearance: none;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    padding: 0.2em;
+  }
+  
+  body {
+    font-family: system-ui, helvetica, arial, sans-serif;
+  }
+  
